@@ -8,8 +8,17 @@
 
     <div class="container">
 
-      <router-link to='/' class='btn btn-info mb-2 mr-2'>Página Inicial</router-link>
-      <router-link :to='{path: "/fisicos"}' class='btn btn-info mb-2 mr-2'>Físicos Importantes</router-link>
+      <router-link to='/' 
+      class='btn btn-info mb-2 mr-2'
+      exact-active-class="active"
+      >
+      Página Inicial
+      </router-link>
+      <router-link :to='{path: "/fisicos"}' 
+      class='btn btn-info mb-2 mr-2'
+      exact-active-class="active">
+      Físicos Importantes
+      </router-link>
       <router-view></router-view>
     </div>
     

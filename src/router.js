@@ -6,6 +6,7 @@ import Home from './views/Home'
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 export default new VueRouter({
+//   linkActiveClass: 'active',
   routes: [
     {path: '/fisicos', component: Fisicos},
     {path: '/', component: Home}
