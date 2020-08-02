@@ -9,8 +9,10 @@ Vue.use(VueRouter)
 export default new VueRouter({
   linkActiveClass: 'active',
   routes: [
-    {path: '/fisicos', component: Fisicos},
-    {path: '/fisicos/:id', component: FisicoDetalhes}, 
+    {path: '/fisicos', component: Fisicos, 
+    children: 
+    [{path: ':id', component: FisicoDetalhes},]},
+     
     {path: '/', component: Home}
   ]
 })

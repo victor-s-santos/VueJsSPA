@@ -1,5 +1,8 @@
 <template>
-    <FisicosLista />
+    <div>
+        <FisicosLista />
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
