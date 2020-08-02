@@ -10,13 +10,14 @@
 
       <router-link to='/' 
       class='btn btn-info mb-2 mr-2'
-      exact-active-class="active"
+      active-class="active"
+      exact
       >
       Página Inicial
       </router-link>
       <router-link :to='{path: "/fisicos"}' 
       class='btn btn-info mb-2 mr-2'
-      exact-active-class="active">
+      active-class="active">
       Físicos Importantes
       </router-link>
       <router-view></router-view>
