@@ -1,7 +1,10 @@
 <template>
     <li>
         <span>{{ fisico.nome }}</span>
-        <button class="btn btn-info btn-sm float-right">Detalhes</button>
+        <router-link 
+        :to="`/fisicos/${fisico.id}`"
+        class="btn btn-info btn-sm float-right">
+        Detalhes</router-link>
     </li>
 </template>
 <script>

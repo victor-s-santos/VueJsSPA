@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Fisicos from './views/fisicos/Fisicos'
+import FisicoDetalhes from './views/fisicos/FisicoDetalhes'
 import Home from './views/Home'
 
 Vue.config.productionTip = false
@@ -9,6 +10,7 @@ export default new VueRouter({
   linkActiveClass: 'active',
   routes: [
     {path: '/fisicos', component: Fisicos},
+    {path: '/fisicos/:id', component: FisicoDetalhes}, 
     {path: '/', component: Home}
   ]
 })
