@@ -9,14 +9,14 @@
     <div class="container">
 
       <router-link to='/' 
-      class='btn btn-info mb-2 mr-2'
+      class='btn btn-info mb-3 mr-2'
       active-class="active"
       exact
       >
       Página Inicial
       </router-link>
       <router-link :to='{path: "/fisicos"}' 
-      class='btn btn-info mb-2 mr-2'
+      class='btn btn-info mb-3 mr-2'
       active-class="active">
       Físicos Importantes
       </router-link>
