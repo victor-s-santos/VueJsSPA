@@ -1,5 +1,9 @@
 <template>
-    <h3 class="font-weight-light">Detalhes sobre o Físico de id: {{$route.params.id}}</h3>
+    <div>
+        <h3 class="font-weight-light">Detalhes sobre o Físico de id: {{$route.params.id}}</h3>
+        <router-link :to="`/fisicos/${id}/editar`"
+        class="btn btn-primary">Editar</router-link>
+    </div>
 </template>
 
 <script>

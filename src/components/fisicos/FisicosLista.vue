@@ -1,10 +1,20 @@
 <template>
     <div>
         <h3 class="font-weight-light">Físicos</h3>
-        <ul class="list-group" v-if="fisicos.length > 0">
+        <div class="form-group">
+            <input
+                type="search"
+                class="form-control"
+                placeholder="Buscar Físicos"
+                @keyup.enter="buscar"
+                >
+        </div>
+
+
+        <ul class="list-group" v-if="fisicosFiltrados.length > 0">
             <FisicosListaItem
                 class="list-group-item"
-                v-for="fisico in fisicos"
+                v-for="fisico in fisicosFiltrados"
                 :key="fisico.id"
                 :fisico="fisico"/>
 
@@ -31,10 +41,25 @@ export default {
             ]
         }
     },
+    computed:{
+        fisicosFiltrados(){
+            const busca = this.$route.query.busca
+            return !busca
+                ? this.fisicos
+                : this.fisicos.filter(f => f.nome.toLowerCase().includes(busca.toLowerCase()))
+        }
+
+    },
     methods: {
         voltar(){
             //this.$router.push('/');
             this.$router.go(-1);
+        },
+        buscar(event){
+            this.$router.push({
+                path: "/fisicos",
+                query: {busca: event.target.value}
+            })
         }
     }
 }

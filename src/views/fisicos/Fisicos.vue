@@ -2,6 +2,7 @@
     <div>
         <FisicosLista />
         <router-view></router-view>
+        <router-view name="fisico-detalhes"></router-view>
     </div>
 </template>
 

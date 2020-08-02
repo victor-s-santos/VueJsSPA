@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Fisicos from './views/fisicos/Fisicos'
 import FisicosHome from './views/fisicos/FisicosHome'
 import FisicoDetalhes from './views/fisicos/FisicoDetalhes'
+import FisicoEditar from './views/fisicos/FisicoEditar'
 import Home from './views/Home'
 
 Vue.config.productionTip = false
@@ -14,6 +15,10 @@ export default new VueRouter({
     children: 
     [
         {path: ':id', component: FisicoDetalhes, name: 'fisico'},
+        {path: ':id/editar', components:{
+            default: FisicoEditar,
+            'fisico-detalhes': FisicoDetalhes
+        }},
         {path: '', component: FisicosHome}
     ]},
      
